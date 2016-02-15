@@ -10,17 +10,26 @@ Solution: https://github.com/jeevanhr7/foodangular
 Solution: https://github.com/jeevanhr7/foodangular/blob/master/server/app.js#L14
 
 ● Demonstrate async
-
+https://github.com/jeevanhr7/foodangular/blob/master/server/api/todo/todo.controller.js#L81
 
 ● Demonstrate calling external api (pick any api of your choice - rottentomatoes, facebook, google, yelp,
 etc.,)
 Using Slack incoming Webhooks api
+https://github.com/jeevanhr7/foodangular/blob/master/server/api/todo/todo.controller.js#L81
+https://github.com/jeevanhr7/foodangular/blob/master/server/api/todo/todo.controller.js#L124
 
 ● Demonstrate Authentication
 
+https://github.com/jeevanhr7/foodangular/blob/master/server/auth/auth.service.js
+https://github.com/jeevanhr7/foodangular/blob/master/server/api/user/index.js#L11
+
 ● Demonstrate Authorization
+https://github.com/jeevanhr7/foodangular/blob/master/server/auth/auth.service.js#L53
+https://github.com/jeevanhr7/foodangular/blob/master/server/api/user/index.js#L10
 
 ● Write API spec for below API using Swagger
+
+https://github.com/jeevanhr7/foodangular/blob/master/todos.swagger.yaml
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.3.0.
 
