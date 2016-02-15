@@ -20,12 +20,14 @@ import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
 var mongoStore = connectMongo(session);
+import cors from 'cors';
 
 export default function(app) {
   var env = app.get('env');
 
   app.set('views', config.root + '/server/views');
   app.set('view engine', 'jade');
+  app.use(cors())
   app.use(compression());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
@@ -50,20 +52,7 @@ export default function(app) {
    * Lusca - express server security
    * https://github.com/krakenjs/lusca
    */
-  if ('test' !== env) {
-    app.use(lusca({
-      csrf: {
-        angular: true
-      },
-      xframe: 'SAMEORIGIN',
-      hsts: {
-        maxAge: 31536000, //1 year, in seconds
-        includeSubDomains: true,
-        preload: true
-      },
-      xssProtection: true
-    }));
-  }
+
 
   app.set('appPath', path.join(config.root, 'client'));
 

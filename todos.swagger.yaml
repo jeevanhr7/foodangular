@@ -1,0 +1,81 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: FOOD Angler API
+  description: Simple todo API
+  version: "1.0.0"
+# the domain of the service
+host: localhost:9000
+# array of all schemes that your API supports
+schemes:
+  - http
+# will be prefixed to all paths
+basePath: /api
+produces:
+  - application/json
+paths:
+  /todos:
+    get:
+      summary: Get All Todos
+      description: List all todos
+
+      tags:
+        - Todos
+      responses:
+        200:
+          description: An array of todos
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Todo'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /todos/{id}:
+    get:
+      summary: Get a single task
+      description: A single task
+      parameters:
+        - name: id
+          in: path
+          description: ID of the task.
+          required: true
+          type: string
+
+      tags:
+        - Todo
+      responses:
+        200:
+          description: An array of todos
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Todo'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+definitions:
+  Todo:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Name of the task.
+      info:
+        type: string
+        description: Description about task.
+
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

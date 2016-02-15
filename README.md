@@ -1,5 +1,27 @@
 # foodangular
 
+#Node task
+Node Task 1:
+● Create a sample project using https://github.com/DaftMonk/generator-angular-fullstack or the
+framework of your choice
+Solution: https://github.com/jeevanhr7/foodangular
+
+● Demonstrate mongo db connection
+Solution: https://github.com/jeevanhr7/foodangular/blob/master/server/app.js#L14
+
+● Demonstrate async
+
+
+● Demonstrate calling external api (pick any api of your choice - rottentomatoes, facebook, google, yelp,
+etc.,)
+Using Slack incoming Webhooks api
+
+● Demonstrate Authentication
+
+● Demonstrate Authorization
+
+● Write API spec for below API using Swagger
+
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.3.0.
 
 ## Getting Started

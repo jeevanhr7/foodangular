@@ -10,6 +10,7 @@ module.exports = {
   },
 
   // Seed database on startup
-  seedDB: true
+  seedDB: true,
+  SLACK_URL: process.env.SLACK_URL
 
 };
